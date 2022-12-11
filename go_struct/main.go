@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	shose "go/Go/go_struct/embedded"
+)
 
 type Product struct {
 	id    string
@@ -37,4 +40,11 @@ func main() {
 
 	fmt.Println(p.price)
 
+	fmt.Println("Embedded Field-------------------------------------------------------------------")
+
+	var nike = shose.NewNike()
+	nike.BuildSize(250)
+
+	fmt.Println(nike.GetLogo())
+	fmt.Println(nike.GetSize())
 }
