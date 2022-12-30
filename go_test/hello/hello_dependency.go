@@ -1,5 +1,8 @@
 package hello
 
+/*
+hello inject dependency
+*/
 type HelloDependencyInterface interface {
 	GetHelloDependency() string
 }

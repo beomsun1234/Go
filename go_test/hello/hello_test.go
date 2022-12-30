@@ -6,6 +6,9 @@ import (
 	"testing"
 )
 
+/*
+mock 주입
+*/
 func Test_Hello_GetHello(t *testing.T) {
 	t.Run("hello를 리턴한다", func(t *testing.T) {
 		//given
