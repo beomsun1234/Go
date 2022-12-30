@@ -1,12 +1,13 @@
 package hello
 
 type Hello struct {
+	hd HelloDependencyInterface
 }
 
-func NewHello() *Hello {
-	return &Hello{}
+func NewHello(hello_di HelloDependencyInterface) *Hello {
+	return &Hello{hd: hello_di}
 }
 
 func (h *Hello) GetHello() string {
-	return "hello"
+	return h.hd.GetHelloDependency()
 }
